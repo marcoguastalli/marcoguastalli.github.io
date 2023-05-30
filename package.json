@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "build": "webpack"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.1"
+  }
+}
