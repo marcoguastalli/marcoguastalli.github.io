@@ -1,1 +1,1 @@
-(async()=>{console.log("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd")})();
+(async()=>{const c=await fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd");console.log(c)})();
