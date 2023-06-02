@@ -1,4 +1,4 @@
-const init = async () => {
+const getBitcoinPrice = async () => {
 
     const url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd';
     const options = {
@@ -12,7 +12,9 @@ const init = async () => {
     const response = await fetch(url, options);
     const result = await response.json();
     // console.log(`Result: ${result}`);
-    document.getElementById("btcusd").innerText = result['bitcoin']['usd'];
+    return result['bitcoin']['usd'];
 };
 
-init();
+document.addEventListener("DOMContentLoaded", async function (event) {
+    document.getElementById("btcusd").innerText = await getBitcoinPrice();
+});
