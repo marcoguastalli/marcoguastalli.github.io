@@ -16,8 +16,8 @@ const init = async () => {
         .catch(function (err) {
             console.log(`Error: ${err}`);
         });
-    const { apiResult } = Promise.then(response => response.json);
-    console.log(apiResult);
+    const result = await response.json()
+    console.log(result);
 };
 
 init();
