@@ -8,17 +8,16 @@ const init = async () => {
             'Accept': 'application/json',
         }
     };
-    let result = [];
     console.log(`Fetch url: ${url}`);
     const response = await fetch(url, options)
         .then((response) => {
             console.log(`Response status code: ${response.status}`);
-            result = response.json();
         })
         .catch(function (err) {
             console.log(`Error: ${err}`);
         });
-        console.log(result);
+    const { apiResult } = Promise.then(response => response.json);
+    console.log(apiResult);
 };
 
 init();
