@@ -1,1 +1,1 @@
-(async()=>{const c=await fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd");console.log(c)})();
+(async()=>{let o=[];await fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd",options).then((s=>{console.log(" Response status code: ",s.status),o=s.json()})).catch((function(o){console.log("Unable to fetch:",o)})),console.log(o)})();
