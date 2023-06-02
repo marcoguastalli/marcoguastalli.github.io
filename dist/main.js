@@ -1,1 +1,1 @@
-(async()=>{const o="https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd";console.log(`Fetch url: ${o}`);const c=await fetch(o,{method:"GET",headers:{"Content-Type":"application/json",Accept:"application/json"}}),e=await c.json();console.log(e)})();
+(async()=>{const t=await fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd",{method:"GET",headers:{"Content-Type":"application/json",Accept:"application/json"}}),e=await t.json();document.getElementById("btcusd").innerText=e.bitcoin.usd})();

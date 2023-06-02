@@ -8,10 +8,11 @@ const init = async () => {
             'Accept': 'application/json',
         }
     };
-    console.log(`Fetch url: ${url}`);
+    // console.log(`Fetch url: ${url}`);
     const response = await fetch(url, options);
-    const result = await response.json()
-    console.log(result);
+    const result = await response.json();
+    // console.log(`Result: ${result}`);
+    document.getElementById("btcusd").innerText = result['bitcoin']['usd'];
 };
 
 init();
