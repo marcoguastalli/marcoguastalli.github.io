@@ -9,13 +9,7 @@ const init = async () => {
         }
     };
     console.log(`Fetch url: ${url}`);
-    const response = await fetch(url, options)
-        .then((response) => {
-            console.log(`Response status code: ${response.status}`);
-        })
-        .catch(function (err) {
-            console.log(`Error: ${err}`);
-        });
+    const response = await fetch(url, options);
     const result = await response.json()
     console.log(result);
 };
