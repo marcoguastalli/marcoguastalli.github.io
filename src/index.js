@@ -15,6 +15,16 @@ const getBitcoinPrice = async () => {
     return result['bitcoin']['usd'];
 };
 
+const getSatoshiPrice = async () => {
+    const bitcoinPrice = await getBitcoinPrice();
+    return parseInt( bitcoinPrice) / 1000000000;
+}
+
 document.addEventListener("DOMContentLoaded", async function (event) {
-    document.getElementById("btcusd").innerText = await getBitcoinPrice();
+    if (document.getElementById("btcusd")) {
+        document.getElementById("btcusd").innerText = await getBitcoinPrice();
+    }
+    if (document.getElementById("satsusd")) {
+        document.getElementById("satsusd").innerText = await getSatoshiPrice();
+    }
 });
