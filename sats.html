@@ -5,7 +5,7 @@
     <meta name="robots" content="noindex">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Sats</title>
-    <meta name="description" content="Satoshi Sats">
+    <meta name="description" content="Satoshi Sats to dollar converter">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
     <script src="./dist/main.js"></script>
@@ -14,7 +14,16 @@
 <div class="container">
     <div class="section">
         <div class="columns">
-            <div class="column">SATOSHI price is <span id="satsusd"></span>$</div>
+            <div class="column">SATOSHI price is <span id="satsusd"></span> $</div>
+            <div class="column">
+                <form id="satsform">
+                    <input type="text" id="satoshi" value="0.1"/>
+                    <input type="button" id="satsbutton" value="Convert SATS to $"/>
+                </form>
+            </div>
+            <div class="column">
+                <span id="satsformoutput"></span>
+            </div>
         </div>
     </div>
 </div>
