@@ -1,6 +1,8 @@
+import {bitcoin_price_api_url} from '../config.js';
+
 export const getBitcoinPrice = async () => {
 
-    const url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd';
+    const url = bitcoin_price_api_url;
     const options = {
         method: 'GET',
         headers: {
