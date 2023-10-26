@@ -6,9 +6,9 @@ export const getBitcoinBlockCount = async () => {
     const options = {
         method: 'GET'
     };
-    console.log(`Fetch url: ${url}`);
+    // console.log(`Fetch url: ${url}`);
     const response = await fetch(url, options);
     const result = await response.json();
-    console.log(`Result: ${result}`);
+    // console.log(`Result: ${result}`);
     return result;
 };
