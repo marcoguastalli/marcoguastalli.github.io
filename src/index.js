@@ -1,4 +1,5 @@
 import {getBitcoinPrice, getSatoshiPrice, submitBtcForm, submitSatsForm} from './forms/forms.js';
+import {getBitcoinBlockCount} from './blocks/bitcoin-block-count.js';
 
 document.addEventListener("DOMContentLoaded", async function (event) {
     if (document.getElementById("btcusd")) {
@@ -22,5 +23,9 @@ document.addEventListener("DOMContentLoaded", async function (event) {
             const satoshi = document.getElementById("satoshi");
             submitSatsForm({ satoshi: satoshi.value });
         });
+    }
+    // bitcoin-block-count
+    if (document.getElementById("bitcoin-block-count")) {
+        document.getElementById("bitcoin-block-count").innerText = await getBitcoinBlockCount();
     }
 });
